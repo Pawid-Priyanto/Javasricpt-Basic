@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <h1>CRUD JavaScript</h1>
+  <div id="container-form" class="tittle-middle">
+    <form onsubmit="event.preventDefault(), submituser()">
+        
+        <div class="form-group row space-top">
+            <label for="nama" class="col-sm-2 col-form-label">nama</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nama" required>
+            </div>
+        </div>
+
+
+        <div class="form-group row space-top">
+            <label for="password" class="col-sm-2 col-form-label">password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pass" required>
+            </div>
+        </div>
+
+        <div class="form-group row space-top">
+            <label for="username" class="col-sm-2 col-form-label">username</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="username" unique required>
+            </div>
+        </div>
+
+        <div class="form-group row space-top">
+            <label for="pekerjaan" class="col-sm-2 col-form-label">pekerjaan</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pekerjaan" required>
+            </div>
+        </div>
+
+        <div class="form-group row space-top">
+            <label for="alamat" class="col-sm-2 col-form-label">alamat</label>
+            <div class="col-sm-10">
+                <input type="textarea" class="form-control" id="alamat" required>
+            </div>
+        </div>
+
+        <div class="form-group row space-top">
+            <label for="hobi" class="col-sm-2 col-form-label">hobi</label>
+            <div class="form-inline ml-3" id="hobi">
+                <label class="mr-4"><input type="checkbox" class="form-control" name="hobi" value="olahraga" />olahraga</label>
+                <label class="mr-4"><input type="checkbox" class="form-control" name="hobi" value="membaca" />membaca</label>
+                <label class="mr-4"><input type="checkbox" class="form-control" name="hobi" value="traveling" />traveling</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-success space-top-botton">Add User</button>
+    
+    </form>
+  </div>
+
+  <table id="myTable1" class="styled-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Username</th>
+        <th>Pekerjaan</th>
+        <th>Alamat</th>
+        <th>Hobi</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+  
+</body>
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>
