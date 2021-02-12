@@ -68,3 +68,35 @@ for (let index = 0; index < odd.length; index++) {
     element1.style.backgroundColor = "blue";
     
 }
+
+// next sibling
+// console.log(itemList.nextSibling)
+
+// console.log('prev sibling',itemList.previousSibling);
+
+// createElement
+
+// create a div
+var newDiv = document.createElement('div');
+newDiv.className = 'hello';
+
+// add id
+newDiv.id = 'id1';
+
+// add attribute
+newDiv.setAttribute('title', 'hello div id 1');
+
+// create a text node
+
+var newDivText = document.createTextNode('hello pawit');
+
+// add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '100px';
+container.insertBefore(newDiv, h1); 
