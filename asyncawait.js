@@ -30,12 +30,11 @@ const getVideoDetail = (video ) => {
 
 
 login('eamil@tes.com', 123456)
-// .then(user => console.log(user))
-.then(user => getUserVideo(user.email))
+.then(user => console.log(user))
+.then(user => getUserVideo(user))
 .then(video => getVideoDetail(video[0]))
 .then(detail => console.log(detail))
 
-console.log('finish');
 
 const displayUser = async () => {
     try {

@@ -27,3 +27,23 @@ const fb = new Promise(resolve => {
 
 Promise.all([fb, yt])
 .then(result => console.log(result))
+
+const p1 = new Promise(resolve => {
+    setTimeout(() => {
+        console.log('Data Pertama');
+        resolve({number: 10})
+    }, 5000)
+    
+})
+
+const p2 = new Promise(resolve => {
+    setTimeout(() => {
+        console.log('Data Kedua');
+        resolve({number: 20})
+    }, 3000)
+    
+})
+
+Promise.all([p1, p2])
+.then(result => console.log(result))
+

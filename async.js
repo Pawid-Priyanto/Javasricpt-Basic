@@ -28,7 +28,7 @@ console.log('start');
 const login = (email, password, callback) => {
     setTimeout(() => {
         console.log('Now we have the data')
-        callback ({ userEmail: email})
+        callback ({ userEmail: email, password: password})
     }, 5000)
 }
 
@@ -54,5 +54,10 @@ const user = login('email@yahoo.com', 123456, user => {
     })
 });
 
-console.log('finish');
+setTimeout(() => {
+    
+    console.log('finish');
+}, 10000)
+
+
 
