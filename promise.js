@@ -47,3 +47,21 @@ const p2 = new Promise(resolve => {
 Promise.all([p1, p2])
 .then(result => console.log(result))
 
+// promise race
+const first = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, 'first')
+    
+})
+
+const second = new Promise((resolve, reject) => {
+    setTimeout(resolve, 300, 'second')
+    
+})
+
+Promise.race([first, second]).then(res => {
+    console.log(res) // second
+})
+
+// Promise.any([first, second]).catch(error => {
+//     console.log(error)
+// })
